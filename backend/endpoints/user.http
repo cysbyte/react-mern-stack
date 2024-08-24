@@ -1,0 +1,42 @@
+@baseUrl = http://localhost:5000
+@urlPath = api/v1
+
+###
+GET {{baseUrl}}/{{urlPath}}/users
+Content-Type: application/json
+Accept: application/json
+
+###
+GET {{baseUrl}}/{{urlPath}}/users/657d498ce55b2efee9be1d56
+Content-Type: application/json
+Accept: application/json
+
+###
+POST {{baseUrl}}/{{urlPath}}/users
+Content-Type: application/json
+Accept: 'application/json'
+
+{
+    "uId": 2,
+    "username": "Jason",
+    "phone": "13333336666",
+    "email": "jason@gmail.com"
+}
+
+###
+PUT {{baseUrl}}/{{urlPath}}/users/66c869bf3cbb4909fa081dbe
+Content-Type: application/json
+Accept: 'application/json'
+
+{
+    "uId": 2,
+    "username": "Jerry",
+    "phone": "133333355555",
+    "email": "cys@gmail.com"
+}
+
+###
+DELETE {{baseUrl}}/{{urlPath}}/users/657d498ce55b2efee9be1d56
+Content-Type: application/json
+Accept: 'application/json'
+

@@ -1,0 +1,126 @@
+@import 'variables';
+@import 'mixins';
+
+.home-container {
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 1200px;
+}
+
+.styled-table {
+    @include table-style;
+    background-color: $bg-color;
+    border: 1px solid $border-color;
+    border-radius: 8px;
+
+    thead {
+        background-color: $primary-color;
+        color: white;
+
+        th {
+            padding: 15px;
+            text-align: left;
+            font-weight: bold;
+        }
+    }
+
+    tbody {
+        tr {
+            &:nth-child(even) {
+                background-color: #f2f2f2;
+            }
+
+            td {
+                padding: 12px;
+                border-bottom: 1px solid $border-color;
+            }
+
+            &:hover {
+                background-color: $hover-bg-color;
+            }
+        }
+    }
+}
+
+.home-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 15px 0;
+
+
+}
+
+.submit {
+    border-width: 0px;
+    background-color: $primary-color;
+    color: white;
+    text-decoration: none;
+    padding: 0.6rem 1.5rem;
+    border-radius: 0.5rem;
+}
+
+.operation-button {
+    border: 1px solid rgba(21, 1, 1, 0.6);
+    color: black;
+    text-decoration: none;
+    padding: 0.3rem 1.5rem;
+    border-radius: 0.5rem;
+}
+
+h3 {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.container {
+    font-family: Arial, sans-serif;
+    background-color: $background-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+  }
+
+.form-container {
+    background-color: $input-bg-color;
+    padding: 20px;
+    border-radius: $border-radius;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 60%;  
+    @media only screen and (max-width: 768px) {
+        width: 100%;
+    }
+}
+
+.styled-form {
+    display: flex;
+    flex-direction: column;
+
+    h1 {
+        margin-bottom: 20px;
+        color: $primary-color;
+        text-align: center;
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: $text-color;
+            font-weight: bold;
+        }
+
+        input {
+            @include form-input-style;
+        }
+
+        button {
+            @include button-style;
+        }
+    }
+}

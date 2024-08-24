@@ -1,0 +1,44 @@
+@mixin table-style {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  @mixin border-radius($radius) {
+    border-radius: $radius;
+  }
+
+  @mixin form-input-style {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid $border-color;
+    border-radius: $border-radius;
+    box-sizing: border-box;
+    font-size: 16px;
+  
+    &:focus {
+      border-color: $focus-color;
+      outline: none;
+      box-shadow: 0 0 5px rgba($focus-color, 0.5);
+    }
+  }
+  
+  @mixin button-style {
+    display: inline-block;
+    padding: 10px 20px;
+    border: none;
+    border-radius: $border-radius;
+    color: #fff;
+    background-color: $primary-color;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  
+    &:hover {
+      background-color: darken($primary-color, 10%);
+    }
+  
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 5px rgba($primary-color, 0.5);
+    }
+  }
